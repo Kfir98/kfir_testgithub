@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+</head>
+
+<body>
+    <script>
+        /* oop - object oriented programming */
+        /* classes - blueprint for objects */
+        /* objects - instances of classes */
+        /* class - template for creating objects */
+        /* constructor - function that runs when an object is created */
+        /* מחלקה היא תבנית ליצירת אובייקטים */
+
+        /* js vanilla es5 - 2009 */
+        function student() {
+            this.id = 1;
+            this.name = "kfir";
+        }
+
+        let s1 = new student();
+        let s2 = new student();
+        console.log(s1);
+        console.log(s1.name);
+        console.log(s2);
+
+        for (let i = 0; i < student.length; i++) {
+            const element = array[i];
+        }
+
+        let person = function (name, age) {
+            this.name = name;
+            this.age = age;
+        }
+        let p1 = new person("kfir", 51)
+        console.log(p1);
+    </script>
+</body>
+
+</html>

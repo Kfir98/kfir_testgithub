@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Work Q2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="dishes"></div>
+    </div>
+    <script>
+        function dish(name, size, category, price, available) {
+            this.name = name;
+            this.size = size;
+            this.category = category;
+            this.price = price;
+            this.available = available;
+        }
+
+        let dishes = [
+
+            new dish("Salad", 400, "First", 37, true),
+
+            new dish("Hamburger M", 200, "Main", 37, true),
+
+            new dish("Hamburger L", 300, "First", 37, false),
+
+            new dish("Pizza L", 220, "First", 37, false),
+
+            new dish("Pizza XL", 320, "First", 55, true),
+
+            new dish("Fries", 270, "First", 26, true),
+
+            new dish("Soup", 190, "First", 30, false),
+
+            new dish("Steak M", 300, "First", 87, true),
+
+        ];
+        for (let i = 0; i < dishes.length; i++) {
+            if (dishes[i].available) {
+                document.getElementById("dishes").innerHTML += `<div class="card col-md-4" style="width: 15rem;">
+
+    <div class="card-body">
+
+    <h5 class="card-title text-primary">${dishes[i].name}</h5>
+
+    <h6 class="card-subtitle mb-2 text-success">${dishes[i].category}</h6>
+
+    <p class="card-text">${dishes[i].price}₪</p>
+
+    </div>
+
+    </div>`;
+            }
+        }
+    </script>
+</body>
+
+</html>
